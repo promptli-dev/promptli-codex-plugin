@@ -1,3 +1,5 @@
+<img src="assets/icon.png" alt="Promptli Comms" width="96" align="right">
+
 # Promptli Comms for Codex
 
 Give OpenAI Codex its own email address and phone number. People email, text or call your agent, and
