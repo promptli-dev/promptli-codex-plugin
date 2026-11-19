@@ -1,6 +1,6 @@
 [project]
 name = "promptli-codex"
-version = "0.1.1"
+version = "0.1.2"
 description = "Give OpenAI Codex its own email address and phone number with Promptli Comms"
 readme = "README.md"
 requires-python = ">=3.11"
