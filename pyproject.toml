@@ -1,13 +1,13 @@
 [project]
 name = "promptli-codex"
-version = "0.1.0"
+version = "0.1.1"
 description = "Give OpenAI Codex its own email address and phone number with Promptli Comms"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 dependencies = [
-    "promptli[cli]>=0.2.1,<0.3",
-    "promptli-gateway>=0.2.1,<0.3",
+    "promptli[cli]>=0.2.2,<0.3",
+    "promptli-gateway>=0.2.2,<0.3",
     "openai-codex>=0.170.0,<1",
     "typer>=0.15",
     "uvicorn>=0.30",

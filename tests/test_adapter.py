@@ -374,14 +374,11 @@ async def test_gateway_same_person_by_email_then_sms_shares_one_thread() -> None
     assert client.log == [("text", (["+15550100001"], "reply #1"))]
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="promptli-gateway 0.2.1 bug: one queue per contact, so a text that arrives while the same "
-    "person's email worker is alive (5 min) is framed as an email (KeyError 'message')",
-)
 async def test_gateway_email_then_sms_in_one_run() -> None:
-    _, client = await run_gateway([email_event(1, "hi by email"), sms_event(2, "and by text")])
+    # promptli-gateway >= 0.2.2: one worker per person, but each queued event keeps its own channel.
+    gw, client = await run_gateway([email_event(1, "hi by email"), sms_event(2, "and by text")])
     assert sorted(k for k, _ in client.log) == ["reply", "text"]
+    assert gw.state.session("ctc_jane") == "thr-0"
 
 
 async def test_gateway_tool_delivered_reply_over_mcp_suppresses_the_auto_reply() -> None:
