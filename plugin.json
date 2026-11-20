@@ -25,7 +25,7 @@
       "interface": {
         "displayName": "Promptli Comms",
         "shortDescription": "Email, SMS and phone calls for Codex",
-        "longDescription": "Your Codex agent gets its own email address and phone number on Promptli Comms. Send and read email and texts, look up contacts and past conversations, and place or schedule calls. Calls placed through the plugin open by saying the caller is an AI. Tools that reach real people ask before they act, and new accounts start in test mode, where nothing reaches real people. Optionally run the promptli-codex background service so people can email, text or call the agent and each person gets their own persistent Codex thread.",
+        "longDescription": "Your Codex agent gets its own email address and phone number on Promptli Comms. Send and read email and texts, look up contacts and past conversations, and place or schedule calls. Calls placed through the plugin open by saying the caller is an AI. Tools that reach real people ask before they act. New accounts are live; a test-mode key simulates everything so nothing reaches real people. Optionally run the promptli-codex background service so people can email, text or call the agent and each person gets their own persistent Codex thread.",
         "developerName": "Promptli",
         "category": "Productivity",
         "capabilities": [
